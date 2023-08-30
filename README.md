@@ -1,1 +1,1 @@
-# d277
+Mock website development for course D277.
