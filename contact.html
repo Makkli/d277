@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Cities</a>
+                    <ul>
+                        <li><a href="olympia.html">Olympia</a></li>
+                        <li><a href="seattle.html">Seattle</a></li>
+                        <li><a href="tacoma.html">Tacoma</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+
+
+    <div class="main-image-container">
+            <img class="top" src="images/Deception_Pass_Puget_Sound.jpg" alt="View of Deception pass with boats in the water.">
+            <header>
+                <h1>Contact Us</h1>
+            </header>
+            <div class="attribution">
+                Image by Patrick_McNally, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Deception_Pass,_Puget_Sound,_Washington_State_-_panoramio.jpg">Wikimedia Commons</a></a>
+            </div> 
+    </div>
+
+    <div class="form-container">
+        <form id="contact" action="#" method="#" enctype="multipart/form-data">
+            <div id="validation-message">&nbsp;</div>
+            <div class="input-container">
+                <div id="name-container">
+                    <div class="field-pair">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Your first name...">
+                    </div>
+                    <div class="field-pair">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Your last name...">
+                    </div>
+                </div>
+
+                <div id="email-container">
+                    <div class="field-pair">
+                        <label for="email">Email Address:</label>
+                        <input type="email" name="email" id="email" placeholder="Your email address...">
+                    </div>
+    
+                    <div class="field-pair">
+                        <label for="confirm-email">Confirm Email:</label>
+                        <input type="email" name="confirm-email" id="confirm-email" placeholder="Confirm email address...">
+                    </div>
+                </div>
+
+                <div id="message-container">
+                    <div class="field-pair">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
+                    </div>
+                </div>
+                <div id="button-container">
+                    <input id="submit-button" type="submit" value="Send It!" disabled>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        let emailInput = document.getElementById('email');
+        let compareInput = document.getElementById('confirm-email');
+        let submitButton = document.getElementById('submit-button');
+        let message = document.getElementById('validation-message');
+
+        emailInput.addEventListener('input', compareEmails);
+        compareInput.addEventListener('input', compareEmails);
+
+        function compareEmails() {
+            
+            let firstEmail = emailInput.value;
+            let secondEmail = compareInput.value;
+
+            if (firstEmail && secondEmail) {
+                if (firstEmail === secondEmail) {
+                    submitButton.removeAttribute('disabled');
+                    message.innerHTML = '&nbsp;';
+                } else {
+                    message.innerHTML = 'Emails must match.';
+                    submitButton.setAttribute('disabled', true);
+
+                }
+            } else {
+                message.innerHTML = '';
+                submitButton.setAttribute('disabled', true);            }
+
+        }
+    </script>
+</body>
+</html>
