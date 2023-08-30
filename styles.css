@@ -361,7 +361,8 @@ textarea {
     font-weight: bold;
     border-radius: 4px;
     border: none;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .2), 0 16px 40px rgba(0, 0, 0, .2)
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .2), 0 16px 40px rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 
 
