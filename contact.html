@@ -36,46 +36,59 @@
             </div> 
     </div>
 
-    <div class="form-container">
-        <form id="contact" action="#" method="#" enctype="multipart/form-data">
-            <div id="validation-message">&nbsp;</div>
-            <div class="input-container">
-                <div id="name-container">
-                    <div class="field-pair">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="Your first name...">
-                    </div>
-                    <div class="field-pair">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Your last name...">
-                    </div>
-                </div>
+    <div class="content-container">
 
-                <div id="email-container">
-                    <div class="field-pair">
-                        <label for="email">Email Address:</label>
-                        <input type="email" name="email" id="email" placeholder="Your email address...">
+        <section class="main-content">
+            <div class="form-container">
+                <form id="contact" action="#" method="#" enctype="multipart/form-data">
+                    <div id="validation-message">&nbsp;</div>
+                    <div class="input-container">
+                        <div id="name-container">
+                            <div class="field-pair">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" name="firstname" id="firstname" placeholder="Your first name...">
+                            </div>
+                            <div class="field-pair">
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Your last name...">
+                            </div>
+                        </div>
+    
+                        <div id="email-container">
+                            <div class="field-pair">
+                                <label for="email">Email Address:</label>
+                                <input type="email" name="email" id="email" placeholder="Your email address...">
+                            </div>
+            
+                            <div class="field-pair">
+                                <label for="confirm-email">Confirm Email:</label>
+                                <input type="email" name="confirm-email" id="confirm-email" placeholder="Confirm email address...">
+                            </div>
+                        </div>
+    
+                        <div id="message-container">
+                            <div class="field-pair">
+                                <label for="message">Message:</label>
+                                <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
+                            </div>
+                        </div>
+                        <div id="button-container">
+                            <input id="submit-button" type="submit" value="Send It!" disabled>
+                        </div>
                     </div>
     
-                    <div class="field-pair">
-                        <label for="confirm-email">Confirm Email:</label>
-                        <input type="email" name="confirm-email" id="confirm-email" placeholder="Confirm email address...">
-                    </div>
-                </div>
-
-                <div id="message-container">
-                    <div class="field-pair">
-                        <label for="message">Message:</label>
-                        <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
-                    </div>
-                </div>
-                <div id="button-container">
-                    <input id="submit-button" type="submit" value="Send It!" disabled>
-                </div>
+                </form>
             </div>
+        </section>
 
-        </form>
+        <aside>
+            <div>
+                <h3 class="centered">Did You Know?</h3>
+            <p>I made this for a school project.</p>
+            </div>
+        </aside>
     </div>
+
 
     <script>
         let emailInput = document.getElementById('email');
